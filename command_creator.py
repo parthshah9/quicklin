@@ -7,8 +7,12 @@ f.write('python png2ppm.py')
 
 folders = glob('/home/linshaonju/BlensorResult_test/*/')
 
-for j in pngs:
-	f.write('./motionseg_release ' + os.path.join(j, 'test.bmf') + ' 0 2 4 0.5' )
+for j in folders:
+
+	pngs = glob(os.path.join(j, '*.png'))
+
+	if(len(pngs) == 2):
+		f.write('./motionseg_release ' + os.path.join(j, 'test.bmf') + ' 0 2 4 0.5\n' )
 
 # images = []
 #     for flow_map in glob.iglob(os.path.join(dir,'*_flow.flo')):
