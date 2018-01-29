@@ -23,7 +23,7 @@ command_file = sys.argv[1]
 commands = [line.rstrip() for line in open(command_file)]
 
 report_step = 30
-pool = Pool(100)
+pool = Pool(300)
 
 for idx, return_code in enumerate(pool.imap(partial(call, shell=True), commands)):
     if idx % report_step == 0:
