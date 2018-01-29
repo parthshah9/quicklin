@@ -3,7 +3,6 @@ from glob import glob
 
 
 f = open('commands.txt','w')
-f.write('python png2ppm.py')
 
 folders = glob('/home/linshaonju/BlensorResult_test/*/')
 
