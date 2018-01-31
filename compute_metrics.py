@@ -38,7 +38,7 @@ valid_folders = glob('/home/linshaonju/BlensorResult_test/*/MulticutResults/ldof
 
 for folder in valid_folders:
 
-	label_location = os.path.join(os.sep.join(p.split(os.sep)[:-3]), 'frame80_labeling.npz')
+	label_location = os.path.join(os.sep.join(folder.split(os.sep)[:-3]), 'frame80_labeling.npz')
 
 
 	loaded = np.load(label_location)
@@ -47,7 +47,7 @@ for folder in valid_folders:
 
 	segments_in_scipy = imread(folder)
 
-	folder_number = os.sep.join(p.split(os.sep)[4:-3])
+	folder_number = os.sep.join(folder.split(os.sep)[4:-3])
 	f.write(folder_number + '  ')
 
 
