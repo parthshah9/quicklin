@@ -4,7 +4,7 @@ from PIL import Image
 from scipy.misc import imread
 import scipy
 import os.path
-
+from glob import glob
 ### LOGGING ####
 
 f = open('logging.txt', 'w')
