@@ -95,6 +95,17 @@ for folder in valid_folders:
 
 
 
+	seg_keys = dict_seg.keys()
+	labels_keys = dict_labels.keys()
+
+	num_seg = len(seg_keys)
+	num_labels = len(labels_keys)
+
+	if(num_seg == 0 or num_labels == 0 or len(labels_all_locations) == 0):
+		folder_counter += 1
+		continue
+
+
 
 
 	### CALC METRICS ###
@@ -114,14 +125,6 @@ for folder in valid_folders:
 
 	f.write('%f  ' % average_region_density)
 	TOTAL_DENSITY += average_region_density
-
-
-
-	seg_keys = dict_seg.keys()
-	labels_keys = dict_labels.keys()
-
-	num_seg = len(seg_keys)
-	num_labels = len(labels_keys)
 
 
 
