@@ -49,7 +49,7 @@ for folder in valid_folders:
 
 	folder_number = os.sep.join(folder.split(os.sep)[4:-3])
 	f.write(folder_number + '  ')
-
+	print(folder_number)
 
 	### PREPROCESSING ###
 
@@ -209,8 +209,8 @@ for folder in valid_folders:
 
 	folder_counter += 1
 
-	print('[%s] running averages: density = %f | precision = %f | recall = %f | f_score = %f | objects extracted = %f | objects seen = %f '
-		 % (folder_number, TOTAL_DENSITY / folder_counter, TOTAL_PRECISION / folder_counter, TOTAL_RECALL / folder_counter, TOTAL_F / folder_counter,
+	print('running averages: density = %f | precision = %f | recall = %f | f_score = %f | objects extracted = %f | objects seen = %f '
+		 % (TOTAL_DENSITY / folder_counter, TOTAL_PRECISION / folder_counter, TOTAL_RECALL / folder_counter, TOTAL_F / folder_counter,
 		 	TOTAL_OBJECTS_EXTRACTED, TOTAL_OBJECTS_SEEN))
 
 	# Iterate over all possible files and then also output to the screen intermittently
