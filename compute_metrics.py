@@ -4,8 +4,6 @@ from PIL import Image
 from scipy.misc import imread
 import scipy
 import os.path
-import os.sep
-
 
 ### LOGGING ####
 
