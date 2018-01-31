@@ -207,12 +207,14 @@ for folder in valid_folders:
 	TOTAL_OBJECTS_EXTRACTED += recognized_objects
 	TOTAL_OBJECTS_SEEN += total_objects
 
+	folder_counter += 1
+
 	print('[%s] running averages: density = %f | precision = %f | recall = %f | f_score = %f | objects extracted = %f | objects seen = %f '
 		 % (folder_number, TOTAL_DENSITY / folder_counter, TOTAL_PRECISION / folder_counter, TOTAL_RECALL / folder_counter, TOTAL_F / folder_counter,
 		 	TOTAL_OBJECTS_EXTRACTED, TOTAL_OBJECTS_SEEN))
 
 	# Iterate over all possible files and then also output to the screen intermittently
-	folder_counter += 1
+
 
 f.write('TOTAL_DENSITY = %f\n' % TOTAL_DENSITY)
 f.write('TOTAL_PRECISION = %f\n' % TOTAL_PRECISION)
